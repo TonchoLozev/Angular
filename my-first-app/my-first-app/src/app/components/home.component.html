@@ -1,0 +1,10 @@
+<h1>{{title.title}} {{title.name}}</h1>
+
+<button (click)="displayList()">{{buttonLabel}}</button>
+<ul *ngIf="showList">
+  <li *ngFor="let heroe of heroes">
+    {{heroe}}
+  </li>
+</ul>
+
+<parent></parent>
