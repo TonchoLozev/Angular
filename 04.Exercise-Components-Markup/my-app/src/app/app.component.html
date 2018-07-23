@@ -1,0 +1,42 @@
+<section class="articles">
+  <span *ngIf="articles.length === 0">No articles to show!</span>
+  <ul class="articles-ul">
+    <li
+      *ngFor="let article of articles"
+      (click)="showInfo(article)"
+    >
+      <span class="title">{{article.title}}</span>
+
+    </li>
+  </ul>
+</section>
+<div class="article-info" *ngIf="articleInfo !== undefined">
+  <span>Author: {{articleInfo.author}}</span>
+  <span>Title: {{articleInfo.title}}</span>
+  <a *ngIf="showImage" (click)="imageAction()">Show image</a>
+  <a *ngIf="hideImage" (click)="imageAction()">Hide image</a>
+  <img *ngIf="showImage" src="{{articleInfo.image}}">
+  <div class="textColor">
+    <span>Text color</span>
+    <select (change)="changeText($event.target)">
+      <option *ngFor="let col of colors" [value]="col.color">
+        {{col.color}}
+      </option>
+    </select>
+  </div>
+  <div class="backgroundColor">
+    <span>Background color</span>
+    <select (change)="changeBackground($event.target)">
+      <option *ngFor="let col of colors" [value]="col.color">
+        {{col.color}}
+      </option>
+    </select>
+  </div>
+  <a (click)="increaseFont()">Increase font size</a>
+  <a (click)="decreaseFont()">Increase font size</a>
+  <div class="description">
+    <p [ngStyle]="descriptionStyle">{{articleInfo.description | slice: 0: initialView}}
+      <a *ngIf="articleInfo.description.length > 250 + initialView" (click)="extendView()">Read more</a>
+    </p>
+  </div>
+</div>
