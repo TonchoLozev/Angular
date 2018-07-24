@@ -1,0 +1,9 @@
+<div class="followers">
+  <button (click)="getFollowers()">Followers</button>
+  <ul *ngIf="followers">
+    <li *ngFor="let follower of followers">
+      <span>{{follower.login}}</span>
+      <img src="{{follower.avatar_url}}">
+    </li>
+  </ul>
+</div>

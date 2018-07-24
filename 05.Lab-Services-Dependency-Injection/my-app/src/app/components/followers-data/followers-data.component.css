@@ -1,0 +1,9 @@
+.followers button{
+  background-color: bisque;
+  border-radius: 7px;
+  border: 0;
+}
+
+.followers button{
+  cursor: pointer;
+}
