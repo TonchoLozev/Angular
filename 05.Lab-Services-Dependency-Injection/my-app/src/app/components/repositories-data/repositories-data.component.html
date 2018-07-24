@@ -1,0 +1,19 @@
+<div class="repos">
+  <button (click)="getRepos()">Repositories</button>
+  <ul *ngIf="repos">
+    <li *ngFor="let repo of repos">
+      <a href="{{repo.url.replace('api.', '').replace('repos/', '')}}"><span>{{repo.name}}</span></a>
+      <span>Repo language: {{repo.language}}</span>
+      <button (click)="getContributors(repo.name)">Contributors</button>
+    </li>
+  </ul>
+  <div class="contributors">
+    <ul *ngIf="contributors">
+      <li *ngFor="let contributor of contributors">
+        <span>Name: {{contributor.login}}</span>
+        <img src="{{contributor.avatar_url}}">
+        <span>Contributions: {{contributor.contributions}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

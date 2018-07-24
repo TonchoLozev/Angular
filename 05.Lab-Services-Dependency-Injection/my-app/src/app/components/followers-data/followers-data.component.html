@@ -2,7 +2,7 @@
   <button (click)="getFollowers()">Followers</button>
   <ul *ngIf="followers">
     <li *ngFor="let follower of followers">
-      <span>{{follower.login}}</span>
+      <a href="{{follower.url.replace('api.', '').replace('users/', '')}}"><span>{{follower.login}}</span></a>
       <img src="{{follower.avatar_url}}">
     </li>
   </ul>

@@ -1,21 +1,21 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
-import {FollowerDataClass} from './FollowerDataClass';
+import {RepositoryDataClass} from './RepositoryDataClass';
 
 
-const url = 'https://api.github.com/users/ivaylokenov/followers';
+const url = 'https://api.github.com/users/ivaylokenov/repos';
 
 @Injectable()
-export class FollowersDataService {
+export class RepositoriesDataService {
   constructor(private http: Http) {
   }
 
-  getData(): Promise<Array<FollowerDataClass>> {
+  getData(): Promise<Array<RepositoryDataClass>> {
     return this.http
       .get(url)
       .toPromise()
       .then(resp => {
-        return resp.json() as FollowerDataClass[];
+        return resp.json() as RepositoryDataClass[];
       })
       .catch(err => {
         console.log(err);

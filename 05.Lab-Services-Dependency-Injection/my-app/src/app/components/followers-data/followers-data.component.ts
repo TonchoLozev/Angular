@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FollowersDataService} from './followersData.service';
-import {FollowerDataClass} from './FollowerData';
+import {FollowerDataClass} from './FollowerDataClass';
 
 @Component({
   selector: 'app-followers-data',
