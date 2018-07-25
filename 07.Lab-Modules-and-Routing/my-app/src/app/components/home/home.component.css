@@ -1,0 +1,22 @@
+.home ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  background-color: cornflowerblue;
+  border-radius: 6px;
+}
+
+.home ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  height: 240px;
+  color: white;
+}
+
+.home ul li img{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}

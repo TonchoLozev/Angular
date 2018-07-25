@@ -1,0 +1,19 @@
+.navBar{
+  display: flex;
+  justify-content: space-around;
+  background-color: azure;
+}
+
+.navBar a{
+  border: 0;
+  background-color: cornflowerblue;
+  border-radius: 7px;
+  color: white;
+  text-decoration: none;
+  width: 70px;
+  text-align: center;
+}
+
+.navBar a:hover{
+  cursor: pointer;
+}

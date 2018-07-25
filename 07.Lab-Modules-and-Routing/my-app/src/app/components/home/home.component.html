@@ -1,0 +1,9 @@
+<div class="home">
+  <ul>
+    <li *ngFor="let car of cars">
+      <span>{{car.make}} {{car.model}}</span>
+      <img src="{{car.image}}">
+      <a routerLink="car/{{car.id}}">Details</a>
+    </li>
+  </ul>
+</div>
