@@ -1,3 +1,16 @@
-<p>
-  cars works!
-</p>
+<div class="allCaars" *ngIf="cars">
+  <ul>
+    <select (change)="sortBy($event.target.value)">
+      <option value="date">Sort by date</option>
+      <option value="name">Sort by name</option>
+      <option value="owner"> Sort by owner</option>
+    </select>
+    <li *ngFor="let car of cars">
+      <span>{{car.make}} {{car.model}}</span>
+      <img src="{{car.image}}">
+      <span>Owner: {{car.owner}}</span>
+      <span>Date: {{car.date}}</span>
+      <button (click)="showCarDetails(car.id)">Details</button>
+    </li>
+  </ul>
+</div>

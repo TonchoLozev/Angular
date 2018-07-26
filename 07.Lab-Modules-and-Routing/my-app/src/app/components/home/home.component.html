@@ -1,9 +1,9 @@
-<div class="home">
+<div class="home" *ngIf="cars">
   <ul>
     <li *ngFor="let car of cars">
       <span>{{car.make}} {{car.model}}</span>
       <img src="{{car.image}}">
-      <a routerLink="car/{{car.id}}">Details</a>
+      <button (click)="showCarDetails(car.id)">Details</button>
     </li>
   </ul>
 </div>

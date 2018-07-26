@@ -1,3 +1,9 @@
-<p>
-  owners works!
-</p>
+<div class="owners" *ngIf="owners">
+  <h1>Owners</h1>
+  <ul>
+    <li *ngFor="let owner of owners">
+      <img src="{{owner.image}}">
+      <button (click)="showOwner(owner.name)">{{owner.name}}</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,52 @@
+:host{
+  height: 50%;
+}
+.owners img{
+  width: 100px;
+  height: 100px;
+}
+h1{
+  align-self: center;
+}
+.owners{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.owners ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: cornflowerblue;
+  border-radius: 25px;
+  color: white;
+  padding: 0;
+  height: 50%;
+}
+
+.owners ul li{
+  height: 150px;
+  width: 150px;
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+button{
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+}
+
+button:hover{
+  cursor: pointer;
+}
+

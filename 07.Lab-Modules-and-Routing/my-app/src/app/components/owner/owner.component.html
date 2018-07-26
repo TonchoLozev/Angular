@@ -1,0 +1,13 @@
+<div class="owner-details" *ngIf="owner">
+  <img src="{{owner.image}}">
+  <span>Name: {{owner.name}}</span>
+  <span>Age: {{owner.age}}</span>
+  <span>Profession: {{owner.profession}}</span>
+</div>
+<span>Cars: </span>
+<ul *ngIf="cars">
+  <li *ngFor="let car of cars">
+    <img src="{{car.image}}">
+    <button (click)="showCar(car.id)">{{car.make}} {{car.model}}</button>
+  </li>
+</ul>

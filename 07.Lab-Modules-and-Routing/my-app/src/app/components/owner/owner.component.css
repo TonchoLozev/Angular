@@ -1,0 +1,62 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.owner-details {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 400px;
+  align-items: center;
+  align-self: center;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  color: white;
+}
+
+.owner-details img {
+  margin-bottom: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+}
+
+ul img {
+  list-style-type: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+}
+
+ul {
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 250px;
+  align-items: center;
+  color: white;
+}
+
+button{
+  background-color: dodgerblue;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+}
+
+button:hover{
+  cursor: pointer;
+}

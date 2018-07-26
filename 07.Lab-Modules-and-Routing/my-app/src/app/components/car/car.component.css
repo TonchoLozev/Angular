@@ -1,0 +1,26 @@
+.car-datails{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+  background-color: cornflowerblue;
+  border-radius: 50px;
+  color: white;
+}
+
+.car-datails img{
+  width: 350px;
+  height: 400px;
+}
+
+.car-datails button{
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.car-datails button:hover{
+  cursor: pointer;
+}

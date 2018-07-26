@@ -1,3 +1,6 @@
+import {CarClass} from "./app/components/home/CarClass";
+import {OwnerClass} from "./app/components/owners/OwnerClass";
+
 let cars = [
   {
     id: 1,
@@ -88,23 +91,28 @@ let owners = [
 
 const dataService = {
   getAllCars: () => {
-    return new Promise((res, rej) => {
+    return new Promise<Array<CarClass>>((res, rej) => {
       res(cars);
     })
   },
-  getCarById: (id) => {
-    return new Promise((res, rej) => {
+  getCarById: (id: Number) => {
+    return new Promise<CarClass>((res, rej) => {
       res(cars.filter(c => id === c.id)[0])
     })
   },
   getAllOwners: () => {
-    return new Promise((res, rej) => {
+    return new Promise<Array<OwnerClass>>((res, rej) => {
       res(owners);
     })
   },
-  getOwnerById: (id) => {
-    return new Promise((res, rej) => {
-      res(owners.filter(o => id === o.id)[0])
+  getOwnerByName: (name) => {
+    return new Promise<OwnerClass>((res, rej) => {
+      res(owners.filter(o => name === o.name)[0])
+    })
+  },
+  getCarsByOwner: (name) => {
+    return new Promise<Array<CarClass>>((res, rej) => {
+      res(cars.filter(c => name === c.owner));
     })
   }
 };

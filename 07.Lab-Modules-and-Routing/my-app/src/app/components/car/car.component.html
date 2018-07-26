@@ -1,3 +1,7 @@
-<p>
-  car works!
-</p>
+<div *ngIf="car" class="car-datails">
+  <span>Car: {{car.make}} model: {{car.model}}</span>
+  <img src="{{car.image}}">
+  <span>Engine: {{car.engine}}</span>
+  <span>Date: {{car.date}}</span>
+  <button (click)="showOwner(car.owner)">Owner <span>{{car.owner}}</span></button>
+</div>
