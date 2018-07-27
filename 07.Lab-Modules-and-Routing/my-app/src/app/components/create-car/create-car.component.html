@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>Car Form</h1>
+  <form (submit)="submitCar()">
+    <div class="form-group">
+
+      <label for="make">Make</label>
+      <input
+        type="text"
+        id="make"
+        name="make"
+        [(ngModel)]="car.make"
+        required>
+      <label for="model">Model</label>
+      <input
+        type="text"
+        id="model"
+        name="model"
+        [(ngModel)]="car.model"
+        required>
+
+      <label for="image">Image</label>
+      <input
+        type="text"
+        id="image"
+        name="image"
+        [(ngModel)]="car.image"
+        required>
+
+      <label for="date">Date</label>
+      <input
+        type="text"
+        id="date"
+        name="date"
+        [(ngModel)]="car.date"
+        required>
+
+      <label for="engine">Engine</label>
+      <input
+        type="text"
+        id="engine"
+        name="engine"
+        [(ngModel)]="car.engine"
+        required>
+
+      <label for="owner">Owner</label>
+      <input
+        type="text"
+        id="owner"
+        name="owner"
+        [(ngModel)]="car.owner"
+        required>
+    </div>
+    <button type="button" (click)="clearInputs()">Clear</button>
+    <button type="submit">Submit</button>
+  </form>
+</div>

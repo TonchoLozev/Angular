@@ -6,6 +6,7 @@ import {CarsComponent} from "../components/cars/cars.component";
 import {OwnersComponent} from "../components/owners/owners.component";
 import {CarComponent} from "../components/car/car.component";
 import {OwnerComponent} from "../components/owner/owner.component";
+import {CreateCarComponent} from "../components/create-car/create-car.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'cars', component: CarsComponent},
   {path: 'car/:id', component: CarComponent},
-  {path: 'owner/:name', component: OwnerComponent}
+  {path: 'owner/:name', component: OwnerComponent},
+  {path: 'create-car', component: CreateCarComponent}
 ];
 
 @NgModule({
