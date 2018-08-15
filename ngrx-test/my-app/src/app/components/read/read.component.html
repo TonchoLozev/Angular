@@ -1,0 +1,8 @@
+<div class="courses">
+  <ul *ngIf="courses">
+    <li *ngFor="let course of courses | async; let i = index">
+      <a [href]="course.url" target="_blank">{{ course.name }}</a>
+      <button (click)="deleteCourse(i)">Delete Course</button>
+    </li>
+  </ul>
+</div>
